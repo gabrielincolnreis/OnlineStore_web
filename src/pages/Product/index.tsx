@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
+
 import {
   Container,
   ProductItem,
@@ -42,7 +43,7 @@ const ProductScreen: React.FC<MyComponent> = (props)=> {
     console.log(response.data);
     setProduct(response.data);
 
-    history.push('/product_list');
+    history.push('/');
 
   }
   
@@ -52,7 +53,7 @@ const ProductScreen: React.FC<MyComponent> = (props)=> {
     console.log(response.data);
     setProduct(response.data);
     
-    history.push('/product_list');
+    history.push('/');
 
   }
   
@@ -72,7 +73,7 @@ const ProductScreen: React.FC<MyComponent> = (props)=> {
       {!product ? ( "carregando dados") : (
         
           <ProductItem>
-          
+           
             <TextField
               id="nomeProduto"
               label="Nome do produto"
@@ -82,7 +83,7 @@ const ProductScreen: React.FC<MyComponent> = (props)=> {
 
             <Button className="ButtonUpdate" onClick={() => { handleUpdateProduct() }} variant="contained">Alterar</Button>
             <Button className="ButtonDelete" onClick={() => { handleDeleteProduct() }} variant="contained">Deletar</Button>
-
+            
 
 
           </ProductItem>
